@@ -1,8 +1,17 @@
 ! Title: Hide Specific
 ! Description: Filters for hiding elements on specific Dutch websites
-! Last updated: Fri, 13 Feb 2026 19:12:15 +0000
+! Last updated: Fri, 13 Feb 2026 20:29:48 +0000
 !
 ! 2026-02-13
+ninefornews.nl##.gofollow
+ninefornews.nl##.gofollow:upward([id^="custom_html-"])
+ninefornews.nl##.ina
+ninefornews.nl##.mag-box.half-box
+ninefornews.nl##.mag-box:has([src*="adskeeper.com"])
+ninefornews.nl##article > div.entry-content > .mag-box-container:has(h3:has-text(Interessant))
+ninefornews.nl###top-box:upward([id^="custom_html-"])
+ninefornews.nl##div[class^="mag-box"] + #adskeeper
+vroom.be##.uppercase:has-text(Advert):upward(.overflow-hidden)
 ditishelmond.nl##.aanbieder
 dmgdeurne.nl##.td-block-title:has-text(Sponsors):upward(.td_block_wrap)
 dmgdeurne.nl##p:has-text(Advert):upward(.widget_block)
@@ -520,11 +529,6 @@ ticketing.knvb.nl###footer-sponsors-wrapper
 voetbal.nl##.Footer-sponsorList:upward(div.Footer-column)
 vrouweneredivisie.nl###sponsors
 ! 2023-11-01
-ninefornews.nl##.gofollow
-ninefornews.nl##.mag-box.half-box
-ninefornews.nl##.mag-box:has([src*="adskeeper.com"])
-ninefornews.nl##article > div.entry-content > .mag-box-container:has(h3:has-text(Interessant))
-ninefornews.nl##div[class^="mag-box"] + #adskeeper
 nnieuws.be##[class*="blockpartners"]
 nnieuws.be##[id^="block-billboard"]:has([class*="banner"])
 nzbindex.nl##form + div a[href^="/"]:has(img)
@@ -688,7 +692,6 @@ voetbalrotterdam.nl##.lshowcase-logos
 ! 2023-04-26
 frontline.digital##.featured-banner
 frontline.digital##.elementor-section:has(.elementor-widget-flip-box img[src*="banner"])
-gezondheidsplein.nl##.ad
 kookboekennieuws.nl##.cb-sidebar-widget:has-text(Kijk ook eens op:)
 rtvmaastricht.nl##.prom
 tameteo.nl###bannerDerPC
@@ -859,7 +862,6 @@ kekmama.nl##[id^="section-ad-banner"]
 psv.nl##.toto
 kbradio.nl##a[href="../../omroep/adverteren/"]
 racexpress.nl##img[src^="/img/sponsors"]:upward(.article-photo)
-jaap.nl##.details-rectangle:upward(1)
 itnijs.frl##.banner:upward(.widget)
 infonu.nl###cc:has(a.product[href*="partnerprogramma.bol.com"])
 indignatie.nl###mvp-content-main .adsbygoogle:upward(1)
@@ -1029,7 +1031,6 @@ maarkelsnieuws.nl##.in-slider-ad
 wegdamnieuws.nl##.ads
 nieuwsuitdelden.nl##.gesponsord_blokje
 ! 2022-03-02
-jaap.nl##div[id^="property_ad_"]
 tvgids.nl##.square-item:has( > .banner)
 ! 2022-02-25
 racesport.nl##.hthb-notification
@@ -1105,7 +1106,7 @@ appletips.nl###singleab
 petitie24.nl###tekstpetitie > :has-text(advert)
 petitie24.nl###tekstpetitie > :has-text(advert) + div
 online-radio.nl###top_ad-360
-eredivisie.ws,f1-gp.nl,formule1.ws,formule1-race.nl,gazetvandaag.be,giganieuws.nl,grandprix.ws,jupilerproleague.eu,krantvandaag.nl,nieuwsgigant.nl,recepten-vandaag.nl,voetbal-vandaag.nl###topbox
+formule1.ws,giganieuws.nl,grandprix.ws,jupilerproleague.eu,nieuwsgigant.nl,voetbal-vandaag.nl###topbox
 starnieuws.com###topstory > div:has-text(Advertentie)
 hotradiohits.nl###tpl_banners
 petities.com###visible_ad_1
@@ -1169,7 +1170,6 @@ nieuwsonline.nu##.clearfix:has(img[src*="/header/"])
 financialinvestigator.nl##.c-newsList__story--partnernews
 tvgids.tv##.col-left
 tvgids.tv##.col-right
-freesoccer.nl##.container-fluid.site-header
 landenweb.nl##.content > table:has(:scope > tbody:has-text(advert))
 ditjesendatjes.nl##.c-partners
 tameteo.nl##.creatividad
@@ -1181,7 +1181,6 @@ paginamarkt.nl##.element:has(.sb-advertentie > .adsbygoogle)
 deliciousmagazine.nl##.elementor-element > .elementor-element-populated:has(.banner-container):not(:has-text(/podcast/i))
 radiocontinu.nl##.eskimo-carousel-container
 heracles.nl##.fixed-ads
-motorrijdenexpert.nl##.flat-theme-content:has(a[href][rel^="noopener"])
 ajax1.nl##.footer__footer-fat
 heracles.nl##.footer-blocks
 heracles.nl##.footer-sponsors
@@ -1207,7 +1206,6 @@ radiofm.nl##.hoofdAd2
 tcroomburg.nl##.hpitem:has(h3:has-text(Partner))
 weertdegekste.nl##.infeed-outer
 weertdegekste.nl##.infeed-wrap
-ninefornews.nl##.in-house
 dansendeberen.be##.inhype-bb-block-header
 radiopros.be##.inside-left-sidebar
 funnygames.nl,funnygames.be,spele.be,spele.nl##.is-billboard
@@ -1231,7 +1229,6 @@ mijn-tv-gids.be##.midzone
 scholieren.com##.min-h-90
 financialinvestigator.nl##.mpu
 nl.motorsport.com##.ms-hapb
-ninefornews.nl##.nfn-target[data-advadsredirect]
 showbizzsite.be##.nieuws-detail-page-bottom-part > :has(.konvento)
 dekattensite.nl##.nxs-default-p > p:has-text(advert)
 inmemoriam.be##.o-news__add
@@ -1267,7 +1264,6 @@ omroephouten.nl##.sponsor-carousel
 volleybelgium.be##.sponsors
 detelefoongids.nl##.static-map
 nos.nl##.ster-banner
-ninefornews.nl##.sticky-element-placeholder
 glutenvrij.nl##.t-banner
 dissident.one##.td-adspot-title
 netonline.be##.tekstboldwit:has-text(ADVERT)
@@ -1318,7 +1314,6 @@ geldpedia.nl,manpedia.nl,vrouwpedia.nl##[id^="gridlove-module-"]:not(.module-typ
 aafm.nl##[id^="loaBlock"]:has-text(Advertentie)
 kanaancourant.nl##[id^="media_image-"]:has(a[href][target="_blank"][rel="noopener"])
 itwm.nl##[id^="tdi_"].tdc-row:has-text(Casino)
-ninefornews.nl##[id^="text-"]:has(.nfn-target[data-advadsredirect])
 radiozuidrand.be##[id^="text-"]:has(.widget-title:has-text(ADVERTEERDERS))
 tweedehandschristelijkeboeken.nl##[id^="text-"]:has([href^="https://www.eo-acties.nl/TradeTracker/index.aspx"])
 despirituelewereld.be##[id^="text-"]:has(a[href]:has([width="300"][height="250"]))
