@@ -1,7 +1,7 @@
 ! Title: EasyDutch
-! Last updated: Sat, 11 Apr 2026 20:10:09 +0000
+! Last updated: Sun, 12 Apr 2026 17:53:24 +0000
 ! Expires: 7 days (update frequency)
-! Diff-Path: patches/2026.4.11.1210.patch#easydutch
+! Diff-Path: patches/2026.4.12.1073.patch#easydutch
 ! Diff-Expires: 6 hours
 ! Description: |
     Dutch supplement for the Easylist filters to use with uBlock Origin
@@ -51,6 +51,8 @@
 _advertentie300x250_
 _advertentieleaderboardhome.
 ! *** EasyDutch:EasyDutch/Block_first_party_Server.txt ***
+||zsp1.ah.be^
+||zsp1.ah.nl^
 ||mooieplaatjes.bierdopje.nl^
 ||adv.noordkop247.nl^
 ||freewheel-jitt.dpgmedia.be^
@@ -134,6 +136,16 @@ _advertentieleaderboardhome.
 ||vpscash.nl^$3p
 ||xpartners.nl^$3p
 ! *** EasyDutch:EasyDutch/Block_Resources.txt ***
+||profielactueel.nl/media/*.gif
+||racexpress.nl/img/sponsors/
+||racexpress.nl/img_sponsors/
+||simone.nl/wp-content/uploads/*onderdelen
+||simone.nl/wp-content/uploads/*502x190px
+||simone.nl/wp-content/uploads/*banner
+||swpportal.com/upload/squarebanners/$3p
+||ucl-voetbal.nl/go/
+||uecl-voetbal.nl/go/
+||uel-voetbal.nl/go/
 ||verkeerplaza.nl/js/ads
 ||elfvoetbal.nl/photos/dynamic/
 ||112achterhoek-nieuws.nl/images/blocks/*_
@@ -354,7 +366,6 @@ omroepalmere.nl/wp-content/uploads/*/vacature-noordpool$image,domain=omroepalmer
 ||beveiligingnieuws.nl/wp-content/uploads/*webbanner$image
 ||ciaotutti.nl/wp-content/uploads/*/italmania$image
 ||radio.nl/i/banners/
-/wp-content/uploads/*.gif$image,domain=cocamsterdam.nl|cocdeventer.nl|cochaaglanden.nl
 ||omroepeemsdelta.nl/wp-content/uploads/*/mw-bedrijfskleding-1.png
 ||omroepeemsdelta.nl/wp-content/uploads/*/deltaglasvezel*.jpeg
 ||curacao.nu/wp-content/uploads/*/*WebAD$image
@@ -366,8 +377,6 @@ omroepalmere.nl/wp-content/uploads/*/vacature-noordpool$image,domain=omroepalmer
 ||gigantfm.nl/assets/images/onderdelenshop$image
 ||motokicx.com/wp-content/uploads/*RAD
 ||noordkopcentraal.nl/wp-content/uploads/*/Vrienden-van
-||racexpress.nl/img/sponsors/
-||simone.nl/wp-content/uploads/*besteonderdelen.nl
 ||rss.app/api/widget/$domain=hollywoodhuizen.nl
 ||sponsorlink.nl/js/snippet.js$script,domain=handbalstartpunt.nl
 ||h2owaternetwerk.nl/images/banners/$image
@@ -415,7 +424,6 @@ omroepalmere.nl/wp-content/uploads/*/vacature-noordpool$image,domain=omroepalmer
 ||belgiancycling.be^*/Logo%27s%20partners/
 ||bitvavo.com/assets/static/widget/$subdocument,domain=cryptosjop.nl
 ||blablacar.nl/widget-driver/$3p
-||bloovi.be/frontend/files/banners/
 ||bnpparibasmarkets.nl/widget/$3p
 ||bol.com/nl/upload/banners/
 ||bol.com/nl/upload/partnerprogramma/$image
@@ -478,35 +486,17 @@ omroepalmere.nl/wp-content/uploads/*/vacature-noordpool$image,domain=omroepalmer
 ||peoplesphere.be/img/logo/financemanagement.png$image
 ||powerconnect.be^*/poweractie.jpg$3p
 ||prm03.wlresources.com/$script,3p
-||profielactueel.nl/content/modules/catalog/4/*.gif$image
 ||promootjesite.nl/images/affliateBanner/
 ||promootjesite.nl/images/banners/
-||psv.nl/upload/*_image*.gif$image
-||psv.nl/upload/*_Soccerlab_Logo.png$image
-||psv.nl/upload/*SponsorVrouwenGOED-300x75.jpg$image
-||racexpress.nl/advertising/$image
-||radioacacia.nl/sponsoren/
 ||radiovisie.eu/wp-content/banners/
 ||recreatief.nl/kerstarrangementen.gif
-||resellers.viboshop.nl/promoimages/
 ||risallah.com/multimedia/images/banners/$image
 ||sedproductions.nl/banners/$image,3p
-||simone.nl/wp-content/uploads/*-onderdelenexpert.nl-
-||sociaaldigitaal.nl/img/Banner-$3p
 ||solarmagazine.nl/u/edwin/$image
-||speurdeals.nl/uploads/banners$image
-||spike-source.com/wp-admin/admin-ajax.php?action=select&p=onder-filmpje$subdocument
-||spike-source.com/wp-admin/admin-ajax.php?action=select&p=rechts-menu-onder$subdocument
 ||srherald.com/wp-content/banners/
-||static.qmusic.*/acties/qnl-nu-ad/index.html$subdocument,domain=nu.nl
 ||stepstone.be/*?event=widgettool.$3p
-||swpportal.com/upload/squarebanners/
 ||te-les-koop.nl/images/B_
 ||totaalwijzer.nl/widget/$3p
-||touretappe.nl/images/xtra/
-||ucl-voetbal.nl/derden/
-||uecl-voetbal.nl/derden/
-||uel-voetbal.nl/derden/
 ||vbro.be/wp-content/uploads/*/autoonderdelen24_$image
 ||vlietnieuws.nl/wp-content/plugins/custom-banners/*$script,1p
 ||voetbaluitslagen.com/wp-content/uploads/*/bet*$image
@@ -541,6 +531,8 @@ omroepalmere.nl/wp-content/uploads/*/vacature-noordpool$image,domain=omroepalmer
 ##.sixpack__advertisement-tile
 ##.adv-tekst
 ! *** EasyDutch:EasyDutch/Hide_Specific.txt ***
+profielactueel.nl##.ads
+simone.nl##.elementor-section:has(.qt-spsfm)
 alblasserdam.net,ambacht.net,dordrecht.net,drechtsteden.net,papendrecht.net,randstadnieuws.nl,s-gravendeel.net,sliedrecht.net,vandaagenmorgen.nl,zwijndrecht.net##a.a-image
 waterweg-actueel.nl##aside [id^="media_image"]
 elfvoetbal.nl##column-right .fake-division
@@ -1112,7 +1104,6 @@ motocrossplanet.nl##[class*="banner_count"]
 motocrossplanet.nl##.artikel-banners
 motocrossplanet.nl##.rcol-titel:has-text(Advert)
 poki.com##.sc-tbf0fc-2:has-text(/Advert/i):upward(div[class])
-profielactueel.nl##div.cube.banners
 spaargids.be##.card-articles:has-text(/gesponsord/i)
 tennisenpadelvlaanderen.be##.aca-header__row--commercial
 weerstationleeuwarden.nl##ins.adsbygoogle:upward(.card)
@@ -1345,8 +1336,6 @@ oogtv.nl##.g
 radio.nl###xttm > .shadow
 radio.nl###xbtm > .shadow
 radio.nl##[id^="takeover"]:has-text(Advert)
-cocamsterdam.nl,cochaaglanden.nl###banners
-cocdeventer.nl###ads
 omroepeemsdelta.nl###qtFooterWidgets:has(.gs_logo_single--wrapper)
 commonsensetv.nl##.theiaStickySidebar div[id^="media_image"]:has(img[src*="wp.com/"])
 dutchcryptotalk.com##.hootslider-image-wrapper
@@ -1362,7 +1351,6 @@ midvliet.nl##.bannergroup:upward(div[class^="t3-module"])
 persberichten.com##[id^="PanelTopAds"]
 kidsweek.nl##.node-advertorial:upward(1)
 kekmama.nl##[id^="section-ad-banner"]
-psv.nl##.toto
 itnijs.frl##.banner:upward(.widget)
 indignatie.nl###mvp-content-main .adsbygoogle:upward(1)
 sleutelstad.nl##.g
@@ -1373,7 +1361,6 @@ h2owaternetwerk.nl##.ja-banner
 groningsnieuws.nl##aside.widget:has(figure img)
 unitednews.sr##.slider-container
 vitesse.nl##.row [id^="form"] + .box > .box-body:has(img)
-vnexplorer.net###ads_right_scroll_single_sidebar
 voetbalnederland.nl###submenubanner
 voetbalrotterdam.nl##div[class^="r89-desktop"]
 golf.be##[class*="-ad-banner-box"]
@@ -1492,7 +1479,6 @@ duurzaam-actueel.nl##[class*="bd-block"]:has(a[href]):has(img[src*="wp-content/u
 duurzaam-actueel.nl##header + section:has([class*="logo-showcase-slider"])
 forum.spaarinformatie.nl##table:has-text(/advert/i)
 kilroynews.net##table:has(a[href="http://www.waffen-jansen.de"])
-morningstar.*###ad_top_page
 filmtotaal.nl###adf-rectangle
 marokko.nl###ad-rec-btf
 kinderspelletjes.be###adRechts
@@ -1501,15 +1487,9 @@ m.radioluisteren.fm###adsense
 openingstijden.com###adsense_CSA
 rickfm.nl###advertisement
 alle-tests.nl###advertising
-bloovi.be###advertising
 marketingtribune.nl###banner-billboard
 kranenwebsite.nl###bannerdiv
-brandweerspotters.nl,coc.nl,fanclubbarcelona.nl###banners
-takecare4.eu###branding > .clearfix
-indiexl.nl###carousel-indiexl_partners_carousel_widget
-vnexplorer.net###div_the_mgid
-538.nl###eCommerce
-alkmaarguardians.nl###footer
+brandweerspotters.nl,fanclubbarcelona.nl###banners
 bokt.nl###frontpage_mediumrect
 unitednews.sr###image-vertical-reel-scroll-slideshow
 tellows.nl###lb_header
@@ -1633,6 +1613,7 @@ mechanisatiemarkt.nl#@#.advert-title
 mechanisatiemarkt.nl#@#.advertiser
 marktplaats.nl#@#.adSummary
 ! *** EasyDutch:EasyDutch/Anti-Adblock.txt ***
+||solarmagazine.nl/u/edwin/$image,redirect-rule=2x2.png
 gratisaftehalen.nl##+js(acs, fuckAdBlock, undefined)
 androidworld.be,androidworld.nl##+js(aeld, , #advertisement__element)
 androidplanet.nl,iphoned.nl##+js(aeld, , #advertisement__element)

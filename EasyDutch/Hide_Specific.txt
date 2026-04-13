@@ -1,7 +1,10 @@
 ! Title: Hide Specific
 ! Description: Filters for hiding elements on specific Dutch websites
-! Last updated: Sat, 11 Apr 2026 20:10:09 +0000
+! Last updated: Sun, 12 Apr 2026 17:42:36 +0000
 !
+! 2026-04-12
+profielactueel.nl##.ads
+simone.nl##.elementor-section:has(.qt-spsfm)
 ! 2026-04-11
 ! Avant digitale steden
 alblasserdam.net,ambacht.net,dordrecht.net,drechtsteden.net,papendrecht.net,randstadnieuws.nl,s-gravendeel.net,sliedrecht.net,vandaagenmorgen.nl,zwijndrecht.net##a.a-image
@@ -658,7 +661,6 @@ motocrossplanet.nl##[class*="banner_count"]
 motocrossplanet.nl##.artikel-banners
 motocrossplanet.nl##.rcol-titel:has-text(Advert)
 poki.com##.sc-tbf0fc-2:has-text(/Advert/i):upward(div[class])
-profielactueel.nl##div.cube.banners
 spaargids.be##.card-articles:has-text(/gesponsord/i)
 tennisenpadelvlaanderen.be##.aca-header__row--commercial
 weerstationleeuwarden.nl##ins.adsbygoogle:upward(.card)
@@ -963,8 +965,6 @@ oogtv.nl##.g
 radio.nl###xttm > .shadow
 radio.nl###xbtm > .shadow
 radio.nl##[id^="takeover"]:has-text(Advert)
-cocamsterdam.nl,cochaaglanden.nl###banners
-cocdeventer.nl###ads
 omroepeemsdelta.nl###qtFooterWidgets:has(.gs_logo_single--wrapper)
 commonsensetv.nl##.theiaStickySidebar div[id^="media_image"]:has(img[src*="wp.com/"])
 ! 2022-06-30
@@ -982,7 +982,6 @@ midvliet.nl##.bannergroup:upward(div[class^="t3-module"])
 persberichten.com##[id^="PanelTopAds"]
 kidsweek.nl##.node-advertorial:upward(1)
 kekmama.nl##[id^="section-ad-banner"]
-psv.nl##.toto
 itnijs.frl##.banner:upward(.widget)
 indignatie.nl###mvp-content-main .adsbygoogle:upward(1)
 sleutelstad.nl##.g
@@ -993,7 +992,6 @@ h2owaternetwerk.nl##.ja-banner
 groningsnieuws.nl##aside.widget:has(figure img)
 unitednews.sr##.slider-container
 vitesse.nl##.row [id^="form"] + .box > .box-body:has(img)
-vnexplorer.net###ads_right_scroll_single_sidebar
 voetbalnederland.nl###submenubanner
 voetbalrotterdam.nl##div[class^="r89-desktop"]
 ! 2022-06-28
@@ -1142,7 +1140,6 @@ duurzaam-actueel.nl##header + section:has([class*="logo-showcase-slider"])
 forum.spaarinformatie.nl##table:has-text(/advert/i)
 kilroynews.net##table:has(a[href="http://www.waffen-jansen.de"])
 ! 2022-01-13
-morningstar.*###ad_top_page
 filmtotaal.nl###adf-rectangle
 marokko.nl###ad-rec-btf
 kinderspelletjes.be###adRechts
@@ -1151,15 +1148,9 @@ m.radioluisteren.fm###adsense
 openingstijden.com###adsense_CSA
 rickfm.nl###advertisement
 alle-tests.nl###advertising
-bloovi.be###advertising
 marketingtribune.nl###banner-billboard
 kranenwebsite.nl###bannerdiv
-brandweerspotters.nl,coc.nl,fanclubbarcelona.nl###banners
-takecare4.eu###branding > .clearfix
-indiexl.nl###carousel-indiexl_partners_carousel_widget
-vnexplorer.net###div_the_mgid
-538.nl###eCommerce
-alkmaarguardians.nl###footer
+brandweerspotters.nl,fanclubbarcelona.nl###banners
 bokt.nl###frontpage_mediumrect
 unitednews.sr###image-vertical-reel-scroll-slideshow
 tellows.nl###lb_header
