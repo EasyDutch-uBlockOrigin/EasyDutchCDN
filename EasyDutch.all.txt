@@ -1,7 +1,7 @@
 ! Title: EasyDutch
-! Last updated: Mon, 20 Jul 2026 08:24:24 +0000
+! Last updated: Sat, 25 Jul 2026 11:31:21 +0000
 ! Expires: 7 days (update frequency)
-! Diff-Path: patches/2026.7.20.504.patch#easydutch
+! Diff-Path: patches/2026.7.25.691.patch#easydutch
 ! Diff-Expires: 6 hours
 ! Description: |
     Dutch supplement for the Easylist filters to use with uBlock Origin
@@ -1141,21 +1141,18 @@ ad.nl,bd.nl,bndestem.nl,destentor.nl,ed.nl,gelderlander.nl,hln.be,pzc.nl,tubanti
 ad.nl,bd.nl,bndestem.nl,destentor.nl,ed.nl,gelderlander.nl,hln.be,pzc.nl,tubantia.nl##div.x-pack__tile:has(.dfp-space)
 alarmeringen.nl##.ad
 autoweek.nl##.advertise
-autoweek.nl##.tile-category:has-text(/advert/i):upward(.aw-tile)
-autowereld.nl###banner-lister-top
+autoweek.nl##.commercial
 autowereld.nl###mainbanner
-businesswise.nl,flair.nl,libelle.nl,oudersvannu.nl,story.nl##[class*="ArticleContentWrapper"] > div[class^="adBlock-module"]
+autowereld.nl##[id^="banner-lister"]
+businesswise.nl,deondernemer.nl,flair.nl,libelle.nl,margriet.nl,oudersvannu.nl,story.nl,veronicasuperguide.nl,vtwonen.be,vtwonen.nl##[class$="__advertisement"]
+businesswise.nl,deondernemer.nl,flair.nl,libelle.nl,margriet.nl,oudersvannu.nl,story.nl,veronicasuperguide.nl,vtwonen.be,vtwonen.nl##section[class$="__adBlockDesktop"]
+businesswise.nl,deondernemer.nl,flair.nl,libelle.nl,margriet.nl,oudersvannu.nl,story.nl,veronicasuperguide.nl,vtwonen.be,vtwonen.nl##section[class^="CategoryBottomAd"]
+businesswise.nl,deondernemer.nl,flair.nl,libelle.nl,margriet.nl,oudersvannu.nl,story.nl,veronicasuperguide.nl,vtwonen.be,vtwonen.nl##.temptation-anchor-ARTICLE_INLINE:upward(1)
+kidsweek.nl,oudersvannu.nl,story.nl##.temptation-anchor-TOP_OF_FOOTER:upward(1)
 cinenews.be##.ads
 demorgen.be,humo.be,parool.nl,trouw.nl,volkskrant.nl##[class$="container"]:has(> div[class]:matches-css(before, content: /Advertentie/))
-demorgen.be,humo.be,parool.nl,trouw.nl,volkskrant.nl,veronicasuperguide.nl##div[id][class]:matches-css(before, content: /Advertentie/)
+demorgen.be,humo.be,parool.nl,trouw.nl,volkskrant.nl##div[id][class]:matches-css(before, content: /Advertentie/)
 demorgen.be,humo.be,parool.nl,trouw.nl,volkskrant.nl##[data-temptation-position="OORTJE"]
-humo.be##.oortje-wrapper
-deondernemer.nl,vtwonen.be,vtwonen.nl##section [data-adslot]:upward(1)
-deondernemer.nl,vtwonen.be,vtwonen.nl##section > span:has-text(advertentie)
-kidsweek.nl##[data-testid="marketing-position-TOP_OF_FOOTER"]:upward(.Footer)
-livios.be##.block-leaderboard
-margriet.nl##[class$="__advertisement"]
-margriet.nl##[class$="__adblock"]
 nu.nl##.banner
 nu.nl##aside .banner + .app-divider
 qmusic.be,qmusic.nl##.c-banner
