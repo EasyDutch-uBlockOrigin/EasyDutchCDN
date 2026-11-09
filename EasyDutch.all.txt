@@ -1,7 +1,7 @@
 ! Title: EasyDutch
-! Last updated: Wed, 04 Nov 2026 19:46:23 +0000
+! Last updated: Sun, 08 Nov 2026 14:12:03 +0000
 ! Expires: 7 days (update frequency)
-! Diff-Path: patches/2026.11.4.1186.patch#easydutch
+! Diff-Path: patches/2026.11.8.852.patch#easydutch
 ! Diff-Expires: 6 hours
 ! Description: |
     Dutch supplement for the Easylist filters to use with uBlock Origin
@@ -133,6 +133,12 @@ _advertentieleaderboardhome.
 ||vpscash.nl^$3p
 ||xpartners.nl^$3p
 ! *** EasyDutch:EasyDutch/Block_Resources.txt ***
+||rotterdam-nesselande.nl/nieuws/zuidplas/rotterdam/nesselande/*/ezgif-*.gif$image
+||rotterdam-nesselande.nl/nieuws/*/wp-content/uploads/*/banner$image
+||ditistwee.nl/images/Banner
+||prowurk.nl/rtvnof-widget-prowurk$domain=rtvnof.nl
+||radios.nl/api/rs-ads/
+||radios.nl/media/*/banner
 ||omroepbovengroningen.nl/wp-content/uploads/2026/10/gerardvanderveen.jpg
 ||omroepbovengroningen.nl/wp-content/uploads/2026/10/vfkerngezond-1.gif
 ||omroepbovengroningen.nl/wp-content/uploads/2026/10/trox.jpg
@@ -304,23 +310,16 @@ avrotros.nl,bnnvara.nl,eo.nl,npo.nl,npodoc.nl,npokennis.nl,vpro.nl##+js(json-pru
 ||kanaancourant.nl/wp-content/uploads/*advertentie.$image
 ||cdn.racingnews365.com/*/images/logos/partners/$image,domain=racingnews365.nl
 ||keukenkopenduitsland.nl/wp-content/uploads/*.gif$domain=goedkoopstekeukensduitsland.nl
-||rotterdam-nesselande.nl/nieuws/*/wp-content/uploads/*/banner$image
 ||psalmboek.nl/banners/$image
 ||resources.planetnine.com/scripts/f1maximaal.nl.js$domain=f1maximaal.nl
-||ninefornews.nl/wp-content/uploads/*/N4N_*.gif
 ||reformatorischeomroep.nl/*/*banner$image
 ||reformatorischeomroep.nl/*/*.gif$image
-||cdn-tmo.nl^*/banners/$domain=maassluis24.nl|nl24.nu|schiedam24.nl|vlaardingen24.nl
 ||papendrecht24.nl/wp-content/uploads/*/*banner$image
 ||papendrecht24.nl/wp-content/uploads/*/*.gif$image
 ||omroepstroom.nl/wp-content/uploads/*/*banner$image
-||ditistwee.nl/images/*bannner
 ||rtvmiddenholland.nl/wp-content/uploads/*/*banner$image
 ||rtvmiddenholland.nl/wp-content/uploads/*/*.gif$image
-||b-cdn.net/*.gif$image,domain=wos.nl
 ||omroep-pim.nl/cwm/fm/userfiles/banner/$image
-||radios.nl/wp-json/rs-ads/
-||radios.nl/wp-content/uploads/*/banner
 ||cms.mvmm.nl/dynimage/rdimg/$image,domain=meetingmagazine.nl
 ||aalsmeervandaag.nl/wp-content/uploads/*/adv$image
 ||static.wixstatic.com/media/*~mv2.*/v*/fill/w_*/*banner$image,domain=nbs-bouwmaterialen.nl
@@ -496,13 +495,28 @@ nos.nl##+js(json-prune-fetch-response, adUrl, , propsToMatch, .azurewebsites.net
 ##div[class^="r89-desktop-"]
 ##div[class^="r89-mobile-"]
 ##.pgAdWrapper
-##a[href^="https://partnerprogramma.bol.com/click/"]
-##a[href^="https://partner.bol.com/click/"]
 ##.article__component--outstream-advertisement
 ##.layout__component--temptation
 ##.sixpack__advertisement-tile
 ##.adv-tekst
 ! *** EasyDutch:EasyDutch/Hide_Specific.txt ***
+strandweer.nu##.cpx-ads
+westlanders.nu##.cpx-ads
+rotterdam-nesselande.nl##.adsbygoogle:not(.adsbygoogle-noablate):upward(1)
+rotterdam-nesselande.nl##[href^="https://www.managementboek.nl/"]:upward([id^="custom"])
+radio-nederland.nl##.right-sidebar__ad
+ninefornews.nl##.gofollow
+ninefornews.nl##.mag-box.half-box
+ninefornews.nl##.mag-box:has([src*="adskeeper.com"])
+ninefornews.nl##.stream-item-size:has(div[id^="h-a-d-s-unlimited"])
+ninefornews.nl##.ina
+ninefornews.nl##article > div.entry-content > .mag-box-container:has(h3:has-text(Interessant))
+at5.nl##[class^="Advertisement_"]
+at5.nl##[class^="article_adContainer"]
+rtvnof.nl##.advert-header
+rtvnof.nl##div.advert:has(iframe)
+radios.nl##div.rsad-wrapper
+radios.nl##div#rs-ad-inside-grid
 omroepbovengroningen.nl##[class*="random_banner_slider"]:upward(.e-parent):has-text(advert)
 omroepbovengroningen.nl##.widget_random_banner_widget
 omroepbovengroningen.nl##.sidebar .textwidget:has-text(advert)
@@ -921,25 +935,13 @@ sante.nl##[id^="adf-"]
 kinderspelletjes.nl##[class^="Ad-"]
 goedkoopstekeukensduitsland.nl###sidebar
 goedkoopstekeukensduitsland.nl##img[width="300"][height="250"]
-westlanders.nu##.elementor-widget-html[data-widget_type="html.default"]:has(.adsbygoogle):upward(1)
-rotterdam-nesselande.nl##[href^="https://managementboek.nl/"]:upward([id^="custom"])
-rotterdam-nesselande.nl##.adsbygoogle:not(.adsbygoogle-noablate):upward(1)
 radiozuidrand.be##[id^="text-"]:has(.widget-title:has-text(PARTNERS))
 pal.be##.advads-sidebar
 pal.be##.advads-cta-geen-advertenties
 pal.be##.inside-article .gb-container > iframe[src^="https://subscribe-forms.beehiiv.com/"]:style(height:auto !important;)
-kerkliedwiki.nl##.div-adsense
 f1maximaal.nl###article-blocks > .raw-html-component
 f1maximaal.nl##.Pnvp__ad:upward(.raw-html-component)
 regio-voetbal.nl##[class^="r89-"]:upward(.component__plugin)
-ninefornews.nl##.gofollow
-ninefornews.nl##.gofollow:upward([id^="custom_html-"])
-ninefornews.nl##.ina
-ninefornews.nl##.mag-box.half-box
-ninefornews.nl##.mag-box:has([src*="adskeeper.com"])
-ninefornews.nl##article > div.entry-content > .mag-box-container:has(h3:has-text(Interessant))
-ninefornews.nl###top-box:upward([id^="custom_html-"])
-ninefornews.nl##div[class^="mag-box"] + #adskeeper
 vroom.be##.uppercase:has-text(Advert):upward(.overflow-hidden)
 ditishelmond.nl##.aanbieder
 dmgdeurne.nl##p:has-text(Advert):upward(.widget_block)
@@ -949,9 +951,6 @@ vmlnieuws.nl,weertfm.nl##aside [id^="custom_html-"]:has-text(Advert)
 rtvalbrandswaard.com##.widget-title:has-text(/Advert/i):upward([id^="media_image"])
 rtvalbrandswaard.com##[id^="custom_html-"]:has([src^="https://bannerbuilder.sponsorkliks.com/"])
 omroeptholen.nl##.block-title:has-text(Advert):upward(.widget)
-sunrisefm.eu##.elementor-widget[class*="elementor-element-ad"]
-linqmedia.nl##.header-banner
-rtvridderkerk.nl##.cm-top-bar
 maassluis24.nl,nl24.nu,schiedam24.nl,vlaardingen24.nl##.advertisement
 papendrecht24.nl###sl24_random_ads
 omroepstroom.nl##.section-title:has-text(Advert):upward(.widget)
@@ -959,13 +958,9 @@ ditistwee.nl##.advertentie.moduletable
 rtvmiddenholland.nl##[id^="rtvmi-"]
 rtvmiddenholland.nl##[class$="_sidebar"] .widget:has([id^="rtvmi-"])
 capelle.tv##.banner
-wos.nl##span:has-text(Advert):upward(.widget)
-at5.nl##[class^="Advertisement_"]
 omroep-pim.nl##.advertentieBanner
-rtvnof.nl##.advert-header
 radioviainternet.nl##div[class*="banner-size-"]
 radiozenders.fm##.banner-leaderboard
-radios.nl##div.rsad-wrapper
 fiets.nl##.banner-container
 columbusmagazine.nl,deliciousmagazine.nl,fietsactief.nl,flowmagazine.nl,happinez.nl,knipmode.nl,landleven.nl,psychologie.nl,zin.nl##.rmn-advert
 beleggersbelangen.nl,columbusmagazine.nl,deliciousmagazine.nl,dezondag.be,ewmagazine.nl,feeling.be,fietsactief.nl,flair.be,flowmagazine.nl,happinez.nl,knack.be,knipmode.nl,kw.be,landleven.nl,libelle.be,psychologie.nl,seasons.nl,truckstar.nl,zin.nl###rmg-mma-navigation
@@ -1007,7 +1002,6 @@ gaykrant.nl##.rstpl-card
 duurzaamnieuws.nl##section[class^="avia_codeblock"]:has-text(wordt mede mogelijk gemaakt door)
 crimesite.nl##[class*="r89"]
 crimesite.nl##[class*="lg:col"]:has(a[href]:not([href*="crimesite.nl"]) > img[src$=".gif"])
-tvvisie.be,tvvisie.nl##.side > .shop:has(a[href^="https://partnerprogramma.bol.com/click/"])
 propertynl.com##.box_header:has-text(Advert)
 propertynl.com##.banner:upward(.row)
 isgeschiedenis.nl##.webads:upward(.no-title)
@@ -1430,10 +1424,6 @@ rotterdambasketbal.nl##img[title^="roba_sponosor_"]
 prewarcar.nl##img[width="160"][height="92"]
 radio182.nl##section.elementor-element:has(h3:has-text(MOGELIJK GEMAAKT DOOR))
 ! *** EasyDutch:EasyDutch/Hide_Whitelist.txt ***
-webshop.harrietverkoelen.nl#@#a[href^="https://partner.bol.com/click/"]
-kookboekennieuws.nl#@#a[href^="https://partner.bol.com/click/"]
-ciaotutti.nl#@#a[href^="https://partner.bol.com/click/"]
-ciaotutti.nl#@#a[href^="https://partnerprogramma.bol.com/click/"]
 gratisaftehalen.nl#@#.ads-image
 adorss.nl,ajaxrss.nl,arsenalrss.nl,blockchainvandaag.com,cambuurrss.nl,casinoreport.nl,cryptobelegging.com,cryptotoekomst.com,damesvoetbalrss.nl,dartsrss.nl,fcbarcelonarss.nl,fczwollerss.nl,feyenoordrss.nl,formula1report.com,formule1rss.nl,fultimateteam.com,gamblingreport.nl,gokkastenrss.nl,graafschaprss.nl,groningenrss.nl,heraclesrss.nl,mvvrss.nl,nacrss.nl,onlinebingorss.nl,onlinecasinorss.nl,onlinegamesrss.nl,onlinegokkenrss.nl,onlinekraslotenrss.nl,onlinepokerrss.nl,onlinerouletterss.nl,oranjerss.nl,psvreport.nl,psvrss.nl,rodarss.nl,spartarss.nl,sportweddenrss.nl,twenterss.nl,utrechtrss.nl,vergelijkbookmakers.nl,vitesserss.nl,voetbalnieuwsrss.be,voetbalnieuwsrss.nl,voetbalnotering.nl,voetbalsnafu.nl,voetbalweddenrss.nl,voetbalwedtipsrss.nl,willem2rss.nl#@#.top-ads-block
 mechanisatiemarkt.nl#@#.advert-container
